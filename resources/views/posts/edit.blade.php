@@ -1,4 +1,7 @@
-<form action="{{ route('posts.patch', [$post->id]) }}" method="POST">
+@extends('layouts.master')
+
+@section('content')
+    <form action="{{ route('posts.patch', [$post->id]) }}" method="POST">
         @csrf
         @method('PATCH')
         <div>
@@ -16,3 +19,5 @@
         </select>
         <button type="submit">Submit</button>
     </form>
+@endsection
+
